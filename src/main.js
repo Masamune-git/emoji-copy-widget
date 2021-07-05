@@ -7,18 +7,18 @@ function createWindow (file) {
     width: 800,
     height: 600,
     webPreferences: {
-      nodeIntegration: false,  // v12からのデフォルト値（記述不要）
-      contextIsolation: true,  // 〃
+      nodeIntegration: false, // v12からのデフォルト値（記述不要）
+      contextIsolation: true, // 〃
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
-  // win.loadURL('file://' + __dirname + '/index.html') 
-  win.loadFile(`public/index.html`)
+  // win.loadURL('file://' + __dirname + '/index.html')
+  win.loadFile('public/index.html')
   // win.webContents.openDevTools()
 }
 
-app.whenReady().then( ()=>{
+app.whenReady().then(() => {
   createWindow('index.html')
 })
 
@@ -34,12 +34,12 @@ app.on('activate', () => {
   }
 })
 
-//----------------------------------------
+// ----------------------------------------
 // IPC通信
-//----------------------------------------
+// ----------------------------------------
 // "絵文字" を返す
 ipcMain.handle('sample', (event, data) => {
-  return(`絵文字</br>`)
+  return (`絵文字</br>`)
 })
 // 絵文字 を返す
 const emojiTest = emoji[2].char

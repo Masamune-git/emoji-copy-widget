@@ -1,6 +1,6 @@
-async function emoji(){
+async function emoji () {
   // var sample = await window.api.sample()
-  var emojiTest = await window.api.emojiTest()
+  const emojiTest = await window.api.emojiTest()
   const emojiFiltered = emojiTest.filter((el) => el.codes.match(/ /) == null)
 
   const sliceByNumber = (array, number) => {
@@ -15,34 +15,33 @@ async function emoji(){
   emojiSlice.forEach(elementArray => {
     elementArray.forEach(element => {
       // document.write(element.char)
-      let dom = document.createElement('input');
+      const dom = document.createElement('input')
       // dom.textContent = element.char
       // dom.title = element.name
-      dom.setAttribute("id",element.name);
-      dom.setAttribute("onclick",`copy("${element.char}")`);
-      dom.setAttribute("type","button");
-      dom.setAttribute("value",element.char);
-      document.body.appendChild( dom );
+      dom.setAttribute('id', element.name)
+      dom.setAttribute('onclick', `copy("${element.char}")`)
+      dom.setAttribute('type', 'button')
+      dom.setAttribute('value', element.char)
+      document.body.appendChild(dom)
     })
-    document.write("</br>");
+    document.write('</br>')
   })
 }
 
-function copy(copyEmoji) {
+function copy (copyEmoji) {
   // console.log(id)
   // コピー対象をJavaScript上で変数として定義する
-  var copyTarget = document.createElement('input');
+  const copyTarget = document.createElement('input')
 
-  document.body.appendChild(copyTarget);
+  document.body.appendChild(copyTarget)
   // コピー対象のテキストを選択する
   copyTarget.value = copyEmoji
   copyTarget.select()
   // 選択しているテキストをクリップボードにコピーする
-  document.execCommand('copy');
-  document.body.removeChild(copyTarget);
+  document.execCommand('copy')
+  document.body.removeChild(copyTarget)
   // コピーをお知らせする
-  alert("コピーできました！ : " + copyTarget.value);
+  alert('コピーできました！ : ' + copyTarget.value)
 }
 
 emoji()
-
