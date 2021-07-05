@@ -5,11 +5,12 @@
   },
   "version": "1.0.0",
   "description": "",
-  "main": "main.js",
+  "main": "src/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "eslint": "eslint",
-    "electron": "electron"
+    "electron": "electron",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -23,8 +24,9 @@
   },
   "homepage": "https://github.com/Masamune-git/emoji_widget#readme",
   "devDependencies": {
-    "electron": "^13.1.4",
-    "eslint": "^7.29.0",
+    "electron": "^13.1.5",
+    "emoji.json": "^13.1.0",
+    "eslint": "^7.30.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.23.4",
     "eslint-plugin-node": "^11.1.0",
