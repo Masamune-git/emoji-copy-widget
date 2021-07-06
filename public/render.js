@@ -14,26 +14,23 @@ async function emoji () {
 
   emojiSlice.forEach(elementArray => {
     elementArray.forEach(element => {
-      // document.write(element.char)
       const dom = document.createElement('input')
-      // dom.textContent = element.char
-      // dom.title = element.name
       dom.setAttribute('id', element.name)
       dom.setAttribute('onclick', `copy("${element.char}")`)
       dom.setAttribute('type', 'button')
       dom.setAttribute('value', element.char)
       document.body.appendChild(dom)
     })
-    document.write('</br>')
+    // document.write('</br>')
   })
 }
 
 function copy (copyEmoji) {
-  // console.log(id)
   // コピー対象をJavaScript上で変数として定義する
   const copyTarget = document.createElement('input')
 
   document.body.appendChild(copyTarget)
+  copyTarget.id = 'emoji'
   // コピー対象のテキストを選択する
   copyTarget.value = copyEmoji
   copyTarget.select()

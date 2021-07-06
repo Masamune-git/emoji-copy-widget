@@ -1,0 +1,17 @@
+body {
+  width: 100%;
+  display: inline-block;
+  text-align: center;
+}
+
+input {
+  width: 10%;
+  font-size: 60px;
+  background-color: white;
+  text-align: center;
+  border: none;
+}
+
+input:hover {
+  background-color: gray;
+}
