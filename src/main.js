@@ -4,8 +4,8 @@ const path = require('path')
 
 function createWindow (file) {
   const win = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 400,
+    height: 400,
     webPreferences: {
       nodeIntegration: false, // v12からのデフォルト値（記述不要）
       contextIsolation: true, // 〃
