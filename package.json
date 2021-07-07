@@ -1,7 +1,7 @@
 {
-  "name": "emoji_widget",
+  "name": "emoji-copy-widget",
   "bin": {
-    "emoji_widget": "main.js"
+    "emoji-copy-widget": "electron ."
   },
   "version": "1.0.0",
   "description": "",
@@ -14,15 +14,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Masamune-git/emoji_widget.git"
+    "url": "git+https://github.com/Masamune-git/emoji-copy-widget.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Masamune-git/emoji_widget/issues"
+    "url": "https://github.com/Masamune-git/emoji-copy-widget/issues"
   },
-  "homepage": "https://github.com/Masamune-git/emoji_widget#readme",
+  "homepage": "https://github.com/Masamune-git/emoji-copy-widget#readme",
   "devDependencies": {
     "electron": "^13.1.5",
     "emoji.json": "^13.1.0",
