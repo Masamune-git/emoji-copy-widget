@@ -1,7 +1,7 @@
 {
   "name": "emoji-copy-widget",
   "bin": {
-    "emoji-copy-widget": "electron ."
+    "emoji-copy-widget": "bin/emoji-copy-widget"
   },
   "version": "1.0.0",
   "description": "",
