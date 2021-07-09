@@ -16,7 +16,10 @@
     "type": "git",
     "url": "git+https://github.com/Masamune-git/emoji-copy-widget.git"
   },
-  "keywords": [],
+  "keywords": [
+    "electron",
+    "emoji.json"
+  ],
   "author": "masamune_npm",
   "license": "MIT",
   "bugs": {
