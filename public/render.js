@@ -21,7 +21,6 @@ async function emoji () {
       dom.setAttribute('value', element.char)
       document.body.appendChild(dom)
     })
-    // document.write('</br>')
   })
 }
 
@@ -38,7 +37,7 @@ function copy (copyEmoji) {
   document.execCommand('copy')
   document.body.removeChild(copyTarget)
   // コピーをお知らせする
-  alert('コピーできました！ : ' + copyTarget.value)
+  alert('I was able to copy it !! : ' + copyTarget.value)
 }
 
 emoji()
