@@ -3,7 +3,7 @@
   "bin": {
     "emoji-copy-widget": "app.js"
   },
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "main": "src/main.js",
   "scripts": {
@@ -30,5 +30,9 @@
     "electron": "^13.1.6",
     "emoji.json": "^13.1.0",
     "eslint": "^7.30.0"
+  },
+  "dependencies": {
+    "electron": "^13.1.6",
+    "emoji.json": "^13.1.0"
   }
 }
