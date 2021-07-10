@@ -7,13 +7,12 @@ function createWindow (file) {
     width: 400,
     height: 400,
     webPreferences: {
-      nodeIntegration: false, // v12からのデフォルト値（記述不要）
-      contextIsolation: true, // 〃
+      nodeIntegration: false,
+      contextIsolation: true,
       preload: path.join(__dirname, 'preload.js')
     }
   })
 
-  // win.loadURL('file://' + __dirname + '/index.html')
   win.loadFile('public/index.html')
   // win.webContents.openDevTools()
 }
@@ -37,12 +36,7 @@ app.on('activate', () => {
 // ----------------------------------------
 // IPC通信
 // ----------------------------------------
-// "絵文字" を返す
-ipcMain.handle('sample', (event, data) => {
-  return (`絵文字</br>`)
-})
-// 絵文字 を返す
-const emojiTest = emoji[2].char
-ipcMain.handle('emojiTest', (event, data) => {
+// 絵文字 を渡す
+ipcMain.handle('emojiJson', (event, data) => {
   return emoji
 })

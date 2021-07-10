@@ -1,7 +1,6 @@
 async function emoji () {
-  // var sample = await window.api.sample()
-  const emojiTest = await window.api.emojiTest()
-  const emojiFiltered = emojiTest.filter((el) => el.codes.match(/ /) == null)
+  const emojiJson = await window.api.emojiJson()
+  const emojiFiltered = emojiJson.filter((el) => el.codes.match(/ /) == null)
 
   const sliceByNumber = (array, number) => {
     const length = Math.ceil(array.length / number)
